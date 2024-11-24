@@ -4,9 +4,9 @@ int ITK_user_main(int argc,	char* argv[]) {
 	int status;
 
 
-	char* user = ITK_ask_cli_argument("-u");
-	char* password = ITK_ask_cli_argument("-p");
-	char* group = ITK_ask_cli_argument("-g");
+	char* user = ITK_ask_cli_argument("-u=");
+	char* password = ITK_ask_cli_argument("-p=");
+	char* group = ITK_ask_cli_argument("-g=");
 
 
 	status = ITK_init_module(user, password, group); //"infodba"
