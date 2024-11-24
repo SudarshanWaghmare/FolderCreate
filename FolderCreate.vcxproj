@@ -110,7 +110,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Siemens\Teamcenter13\TC_Root\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Siemens\Teamcenter13\TC_Root\lib\*.lib;C:\Siemens\Teamcenter13\TC_Root\lib\itk.main.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Siemens\Teamcenter13\TC_Root\lib\*.lib;C:\Siemens\Teamcenter13\TC_Root\lib\itk_main.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
