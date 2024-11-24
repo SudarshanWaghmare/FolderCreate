@@ -25,6 +25,9 @@ int ITK_user_main(int argc,	char* argv[]) {
 	else {
 		printf("Failed to create folder.\n");
 	}
+
+	status = ITK_init_exit(true); // log out fro teamcenter
+	
 	(void)_getch();
 	return ITK_ok;
 }
