@@ -17,6 +17,14 @@ int ITK_user_main(int argc,	char* argv[]) {
 		printf("Failed to Login.\n");
 	}
 
+	tag_t new_folder = NULLTAG;
+	status = FL_create2("ITEM CERATED BY ITK", "Folder ", &new_folder);
+	if (status == ITK_ok) {
+		printf("Folder created Successful.\n");
+	}
+	else {
+		printf("Failed to create folder.\n");
+	}
 	(void)_getch();
 	return ITK_ok;
 }

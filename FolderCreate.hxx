@@ -3,5 +3,6 @@
 
 #include<tc/tc_startup.h>
 #include<tcinit/tcinit.h>
+#include<tc/folder.h>
 
 
