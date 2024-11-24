@@ -9,7 +9,7 @@ int ITK_user_main(int argc,	char* argv[]) {
 	char* group = ITK_ask_cli_argument("-g");
 
 
-	status = ITK_init_module(user, password, group);
+	status = ITK_init_module(user, password, group); //"infodba"
 	if (status == ITK_ok) {
 		printf("Login Successful.\n");
 	}
