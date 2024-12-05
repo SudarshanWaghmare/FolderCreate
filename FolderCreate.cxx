@@ -19,8 +19,8 @@ int ITK_user_main(int argc,	char* argv[]) {
 	tag_t Fuser = NULLTAG;
 	status= SA_find_user2("infodba", & Fuser);
 
-	tag_t home_folder;
-	status = SA_ask_user_home_folder(Fuser, &home_folder);
+	tag_t Uhome_folder;
+	status = SA_ask_user_home_folder(Fuser, &Uhome_folder);
 	if (status == ITK_ok) {
 		printf("\n-----User home folder found Successful.-----\n");
 	}
@@ -70,6 +70,15 @@ int ITK_user_main(int argc,	char* argv[]) {
 	else {
 		printf("Failed to save folder.\n");
 	}
+
+	status= FL_insert(Uhome_folder, new_folder, 999);
+	if (status == ITK_ok) {
+		printf("Folder insertted at home Successful.\n");
+	}
+	else {
+		printf("Failed to insert new folder at home.\n");
+	}
+
 
 	status = ITK_exit_module(true); // log out fro teamcenter
 	if (status == ITK_ok) {
