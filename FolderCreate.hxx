@@ -4,5 +4,9 @@
 #include<tc/tc_startup.h>
 #include<tcinit/tcinit.h>
 #include<tc/folder.h>
+#include<tccore/tctype.h>
+#include<sa/user.h>
+#include<tccore/aom.h>
+
 
 
