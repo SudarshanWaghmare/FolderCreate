@@ -3,13 +3,12 @@
 int ITK_user_main(int argc,	char* argv[]) {
 	int status;
 
-
 	char* user = ITK_ask_cli_argument("-u=");
 	char* password = ITK_ask_cli_argument("-p=");
 	char* group = ITK_ask_cli_argument("-g=");
 
 
-	status = ITK_init_module(user, password, group); //"infodba"
+	status = ITK_init_module("infodba", "infodba", "dba");
 	if (status == ITK_ok) {
 		printf("\n-----Login Successful.-----\n");
 	}
@@ -17,8 +16,11 @@ int ITK_user_main(int argc,	char* argv[]) {
 		printf("\n-----Failed to Login.-----\n");
 	}
 
+	tag_t Fuser = NULLTAG;
+	status= SA_find_user2("infodba", & Fuser);
+
 	tag_t home_folder;
-	status= SA_ask_user_home_folder(user, &home_folder);
+	status = SA_ask_user_home_folder(Fuser, &home_folder);
 	if (status == ITK_ok) {
 		printf("\n-----User home folder found Successful.-----\n");
 	}

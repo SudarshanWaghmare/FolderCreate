@@ -7,6 +7,3 @@
 #include<tccore/tctype.h>
 #include<sa/user.h>
 #include<tccore/aom.h>
-
-
-
