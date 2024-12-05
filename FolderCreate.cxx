@@ -89,5 +89,5 @@ int ITK_user_main(int argc,	char* argv[]) {
 	}
 	
 	(void)_getch();
-	return ITK_ok;
+	return status;
 }
